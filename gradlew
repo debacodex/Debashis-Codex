@@ -1,3 +1,8 @@
+
+Dorg.gradle.configureondemand=true
+-Dorg.gradle.dependency.verification=on
+-Dorg.gradle.unsafe.isolated-projects=true
+
 #!/usr/bin/env sh
 
 #
