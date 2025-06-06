@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630324853939",
+    "project_id": "debashis-codex",
+    "storage_bucket": "debashis-codex.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630324853939:android:fd164b0f69d3b1029dc4c6",
+        "android_client_info": {
+          "package_name": "com.github.debacodex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630324853939-09tic3ivo4v84ejl6a0k8gvcdvorabus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRoWYRY9zqsmrrv1nlnp4tVpfL7YGYEK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630324853939-09tic3ivo4v84ejl6a0k8gvcdvorabus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
