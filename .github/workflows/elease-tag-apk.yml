@@ -3,7 +3,7 @@ name: Build APK on Tag
 on:
   push:
     tags:
-      - 'v1.0.1*'  # सभी v से शुरू होने वाले टैग (जैसे v1.0.0)
+      - 'v1.0.1'  # सभी v से शुरू होने वाले टैग (जैसे v1.0.0)
 
 jobs:
   build:
@@ -23,6 +23,9 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
 
+      - name: Grant execute permission to Gradle wrapper
+        run: chmod +x ./gradlew
+        
       - name: Build Release APK
         run: ./gradlew assembleRelease
 
