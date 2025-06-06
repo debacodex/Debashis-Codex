@@ -2,7 +2,7 @@
 
 ## UI Material Design // Dark Theme
 
-[![Android CI](https://github.com/debacodex/Debashis-Codex/actions/workflows/build-apk.yml/badge.svg)](https://github.com/debacodex/Debashis-Codex/actions/workflows/build-apk.yml)
+[![Android CI](https://github.com/debacodex/Debashis-Codex/actions/workflows/build-apk.yml/badge.svg)](https://github.com/debacodex/Debashis-Codex/actions/workflows/android.yml)
 
 ## Picture.1
 <img src="sample screenshot/Screenshot_20250531-211350.Debashis Codex.png"/>
