@@ -3,7 +3,7 @@ plugins {
 id 'com.google.gms.google-services'
 }
 android 
-    namespace 'com.github.debacodex'
+    
     compileSdk 29
     defaultConfig {
         applicationId "com.github.debacodex"
