@@ -3,7 +3,7 @@ plugins {
 id 'com.google.gms.google-services'
 }
 android 
-    compileSdk 29
+  
     defaultConfig {
         applicationId "com.github.debacodex"
         minSdk 30
