@@ -4,6 +4,6 @@
     tools:targetApi="lollipop">
 
     <item android:id="@+id/mask"
-        android:drawable="@color/ripple"/>
+        android:drawable="@color/colorControlNormal"/>
 
 </ripple>
