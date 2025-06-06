@@ -3,8 +3,8 @@ name: Build APK on Tag
 on:
   push:
     tags:
-    workflow_dispatch:
-      - 'v1.0.1'  # सभी v से शुरू होने वाले टैग (जैसे v1.0.0)
+    
+      - 'v*'  # सभी v से शुरू होने वाले टैग (जैसे v1.0.0)
 
 jobs:
   build:
