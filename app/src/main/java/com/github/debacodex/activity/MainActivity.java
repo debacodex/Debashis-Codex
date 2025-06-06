@@ -1,17 +1,11 @@
 package com.github.debacodex.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -21,10 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 import com.github.debacodex.R;
 import com.github.debacodex.adapter.ViewPagerAdapter;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -38,16 +29,15 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.Wr
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 
 public class MainActivity extends AppCompatActivity {
-
+	
 	private DrawerLayout drawerLayout;
 	private NavigationView navigationView;
 
 	private ViewPager mViewPager;
 	private ViewPagerAdapter viewPagerAdapter;
-	private FloatingActionButton fabAdd;
+
 	private static final String[] CHANNELS = new String[] { "DEBASHIS", "NARESH", "SURESH", "FATHER", "MOTHER" };
 	private List<String> mDataList = new ArrayList<String>(Arrays.asList(CHANNELS));
-	private Animation animation;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,16 +58,6 @@ public class MainActivity extends AppCompatActivity {
 		viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
 		mViewPager.setAdapter(viewPagerAdapter);
-
-		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAdd);
-		fab.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-
-				//   startActivity(new Intent(MainActivity.this, TabActivity.class));
-				Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-			}
-		});
 
 		navigationView = findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -197,12 +177,11 @@ public class MainActivity extends AppCompatActivity {
 
 		switch (item.getItemId()) {
 		case R.id.code:
-			/*	Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+			/*	Intent intent = new Intent(MainActivity.this, ImageActivity.class);
 				startActivity(intent);*/
 			break;
 		case R.id.about:
-Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-				startActivity(intent);
+
 			break;
 		}
 		return super.onOptionsItemSelected(item);

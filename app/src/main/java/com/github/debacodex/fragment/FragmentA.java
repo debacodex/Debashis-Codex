@@ -47,11 +47,132 @@ public class FragmentA extends Fragment {
 
 	private List<MyItem> generateDummyData() {
 		List<MyItem> data = new ArrayList<>();
-		data.add(new MyItem("Abaram (daughter)", "https://shorturl.at/vFWtd",
-				"R.string.app_name",
-				"Sindising" // <-- New short description
+		data.add(new MyItem("Item 1 (List)", "https://shorturl.at/vFWtd",
+				"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+				"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://shorturl.at/gI1fI",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 1 (List)", "https://via.placeholder.com/150/FF5733/FFFFFF?text=Item1",
+				"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+				"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 1 (List)", "https://via.placeholder.com/150/FF5733/FFFFFF?text=Item1",
+		"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+		"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
 		));
 		
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 1 (List)", "https://shorturl.at/vFWtd",
+				"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+				"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://shorturl.at/gI1fI",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 1 (List)", "https://via.placeholder.com/150/FF5733/FFFFFF?text=Item1",
+				"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+				"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+				"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+				"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 1 (List)", "https://via.placeholder.com/150/FF5733/FFFFFF?text=Item1",
+		"This is the detailed description for Item 1. It has specific information just for this item and can be quite long.",
+		"Short summary for Item 1." // <-- New short description
+		));
+		data.add(new MyItem("Item 2 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 3 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		
+		data.add(new MyItem("Item 4 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
+		data.add(new MyItem("Item 5 (List)", "https://via.placeholder.com/150/33FF57/FFFFFF?text=Item2",
+		"Here are the unique details for Item 2. This content changes based on what you click and can contain many paragraphs.",
+		"Item 2's brief info." // <-- New short description
+		));
 		return data;
 	}
 }

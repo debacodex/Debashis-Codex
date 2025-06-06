@@ -1,11 +1,11 @@
 plugins {
     id 'com.android.application'
-	id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdk 31
 
+
+    compileSdk 31
     defaultConfig {
         applicationId "com.github.debacodex"
         minSdk 30
@@ -16,6 +16,7 @@ android {
 
     buildTypes {
         release {
+        
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -27,8 +28,13 @@ android {
 }
 
 dependencies {
-  implementation 'com.google.firebase:firebase-analytics:21.2.2'
-  
-	// NOTE: CodeAssist does NOT support adding dependencies here, 
-	// use the library manager instead
+implementation 'androidx.appcompat:appcompat:1.3.1'
+implementation 'com.google.android.material:material:1.4.0'
+implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+implementation 'androidx.recyclerview:recyclerview:1.1.0'
+implementation 'com.github.hackware1993:MagicIndicator:1.7.0' // for androidx
+implementation 'com.github.bumptech.glide:glide:4.15.1'
+implementation 'com.google.firebase:firebase-analytics:21.2.2'
+implementation 'com.google.firebase:firebase-messaging:20.1.0'
+
 }

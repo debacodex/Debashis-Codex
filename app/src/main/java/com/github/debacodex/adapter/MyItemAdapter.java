@@ -51,7 +51,7 @@ public class MyItemAdapter extends RecyclerView.Adapter<MyItemAdapter.MyViewHold
 				.into(holder.imageView);
 
 		// Or set to null
-		int anim = R.anim.slide_in_right;
+		int anim = R.anim.anim_simple_two;
 		holder.itemView.setAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), anim));
 		holder.itemContainer.setOnClickListener(v ->
 
@@ -62,12 +62,8 @@ public class MyItemAdapter extends RecyclerView.Adapter<MyItemAdapter.MyViewHold
 
 			intent.putExtra("item_image", currentItem.getImageUrl());
 			intent.putExtra("item_description", currentItem.getDescription());
-            context.startActivity(intent);
-			
-			if (context instanceof androidx.appcompat.app.AppCompatActivity) {
-                    ((androidx.appcompat.app.AppCompatActivity) context).overridePendingTransition(R.anim.fade_out,R.anim.fade_out);
-                }
-            
+
+			context.startActivity(intent);
 		});
 
 	}

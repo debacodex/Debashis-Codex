@@ -31,11 +31,6 @@
         <activity
             android:name=".activity.DetailsActivity"
             android:exported="false" />
-			   <activity
-            android:name=".activity.LoginActivity"
-            android:exported="false" />
-			
-			
 
         <service
             android:name=".service.FirebaseMessagingService"

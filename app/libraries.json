@@ -33,33 +33,5 @@
     "groupId": "com.github.bumptech.glide",
     "scope": "compile",
     "versionName": "4.15.1"
-  },
-  {
-    "artifactId": "firebase-messaging",
-    "excludes": [],
-    "groupId": "com.google.firebase",
-    "scope": "compile",
-    "versionName": "20.1.0"
-  },
-  {
-    "artifactId": "firebase-auth",
-    "excludes": [],
-    "groupId": "com.google.firebase",
-    "scope": "compile",
-    "versionName": "19.3.2"
-  },
-  {
-    "artifactId": "play-services-auth",
-    "excludes": [],
-    "groupId": "com.google.android.gms",
-    "scope": "compile",
-    "versionName": "18.1.0"
-  },
-  {
-    "artifactId": "firebase-database",
-    "excludes": [],
-    "groupId": "com.google.firebase",
-    "scope": "compile",
-    "versionName": "19.5.1"
   }
 ]

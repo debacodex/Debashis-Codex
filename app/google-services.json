@@ -12,12 +12,7 @@
           "package_name": "com.github.debacodex"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "630324853939-09tic3ivo4v84ejl6a0k8gvcdvorabus.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
           "current_key": "AIzaSyCRoWYRY9zqsmrrv1nlnp4tVpfL7YGYEK0"
@@ -25,12 +20,7 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "630324853939-09tic3ivo4v84ejl6a0k8gvcdvorabus.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

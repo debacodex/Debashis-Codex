@@ -1,26 +1,21 @@
-# proguard-rules.pro
-# Add any project specific ProGuard rules here.
-# For more information see the official documentation:
-# http://developer.android.com/tools/help/proguard.html
-
-# If your project uses the Android Support Library, you probably don't
-# need to specify any additional ProGuard rules, since the support
-# library already defines and includes its own ProGuard rules.
+# Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
 #
-# For example, to ensure the ObfuscatedStringUtility class is not obfuscated
-# -keep class com.example.stringfogexample.ObfuscatedStringUtility { *; }
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# Example to keep resource names (less relevant for string *content* obfuscation)
-# -keepclassmembers class **.R$* {
-#    public static <fields>;
-# }
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
 
-    # Add this global rule
-    -keepattributes Signature
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
 
-    # This rule will properly ProGuard all the model classes in
-    # the package com.yourcompany.models.
-    # Modify this rule to fit the structure of your app.
-    -keepclassmembers class com.github.debacodex.model.** {
-      *;
-    }
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
