@@ -7,8 +7,8 @@ android {
     compileSdk 29
     defaultConfig {
         applicationId "com.github.debacodex"
-        minSdk 30
-        targetSdk 31
+        minSdk 21
+        targetSdk 29
         versionCode 1
         versionName "1.0"
     }
