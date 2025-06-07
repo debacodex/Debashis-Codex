@@ -1,52 +1,26 @@
-name: Android Release
+name: Build & Publish Release APK
 
 on:
   push:
     tags:
-      - 'v*.*.*' # Trigger on new tags like v1.0.0, v1.0.1, etc.
+      - '*'
 
 jobs:
-  build_and_release:
+  Gradle:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Decode Keystore
-        # This step decodes your Base64 encoded keystore from a GitHub Secret
-        # Replace ANDROID_KEYSTORE_BASE64 with the name of your GitHub Secret
-      #  run: echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > release-keystore.jks
-
-      - name: Build release APK
-        run: ./gradlew assembleRelease --stacktrace # Add --stacktrace for detailed error logs
-
-      - name: Sign APK (if not signed by Gradle)
-        # This step is often not needed if assembleRelease signs the APK
-        # but can be useful for explicit signing.
-        # Make sure you adapt paths and secrets to your setup.
-        # KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD secrets.
-         run: |
-           jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
-           -keystore release-keystore.jks -storepass ${{ secrets.KEYSTORE_PASSWORD }} \
-           app/build/outputs/apk/release/app-release-unsigned.apk ${{ secrets.KEY_ALIAS }}
-          zipalign -v 4 app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release.apk
-
-      - name: Upload APK to Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: app/build/outputs/apk/release/*.apk # Adjust path to your APK
-          draft: false # Set to true to create a draft release first
-          prerelease: false # Set to true for pre-releases
-          name: Release ${{ github.ref_name }} # Use the tag name as release name
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEBA_TOKEN }} # This is a default token provided by GitHub
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: setup jdk
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Make Gradle executable
+      run: chmod +x ./gradlew
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
+    - name: Releasing using Hub
+      uses: sangatdesai/release-apk@main
+      env:
+       GITHUB_TOKEN: ${{ secrets.DEBA_TOKEN }}
+       APP_FOLDER: app
