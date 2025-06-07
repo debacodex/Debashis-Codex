@@ -4,11 +4,11 @@ id 'com.google.gms.google-services'
 }
 android {
     namespace 'com.github.debacodex'
-    compileSdk 29
+    compileSdk 29.0.3
     defaultConfig {
         applicationId "com.github.debacodex"
         minSdk 21
-        targetSdk 29
+        targetSdk 29.0.3
         versionCode 1
         versionName "1.0"
     }
