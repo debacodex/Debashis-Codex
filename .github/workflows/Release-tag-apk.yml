@@ -2,8 +2,7 @@ name: Build & Release APK
 
 on:
   workflow_dispatch:
-    tags:
-      - 'v*'
+    
 
 jobs:
   build:
