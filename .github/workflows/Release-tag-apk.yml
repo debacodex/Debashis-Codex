@@ -1,7 +1,8 @@
 name: Build & Publish Release APK
 
 on:
-  branches: [ "main" ]
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
     tags:
