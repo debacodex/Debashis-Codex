@@ -1,7 +1,9 @@
 name: Build & Release APK
 
 on:
-  push:
+  branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
     tags:
       - 'v*'
 
@@ -18,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '11'
 
       - name: Decode keystore
         run: |
