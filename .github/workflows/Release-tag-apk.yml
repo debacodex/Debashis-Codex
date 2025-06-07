@@ -1,8 +1,9 @@
 name: Build & Release APK
 
 on:
-
-repository_dispatch:
+push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
