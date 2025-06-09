@@ -1,0 +1,2 @@
+rootProject.name = "debashis-codex"
+include ':app'
