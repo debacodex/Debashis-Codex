@@ -1,0 +1,41 @@
+name: Build Signed APK from AAB
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build AAB (Release)
+        run: ./gradlew bundleRelease
+
+      - name: Convert AAB to APK using BundleTool
+        uses: mukeshsolanki/bundletool-action@v1.0.0
+        with:
+          aabFile: app/build/outputs/bundle/release/app-release.aab
+          base64Keystore: ${{ secrets.KEYSTORE_BASE64 }}
+          keystoreAlias: ${{ secrets.KEY_ALIAS }}
+          keystorePassword: ${{ secrets.KEY_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signed-apk
+          path: release-unsigned-signed.apk
